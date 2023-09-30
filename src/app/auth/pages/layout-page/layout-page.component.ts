@@ -9,3 +9,10 @@ import { Component } from '@angular/core';
 export class LayoutPageComponent {
 
 }
+
+// MOVE - option + flecha 
+// clone - Shift + option + flecha
+// comentar - cmd + k + c
+// descoment - cmd + k + u
+
+
