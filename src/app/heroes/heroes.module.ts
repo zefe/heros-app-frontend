@@ -13,6 +13,10 @@ import { LayoutPageComponent } from './pages/layout-page/layout-page.component';
 import { CardComponent } from './components/card/card.component';
 import { HeroImagePipe } from './pipes/hero-image/hero-image.pipe';
 import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
+import { TablePageComponent } from './pages/table-page/table-page.component';
+import { AgGridModule } from 'ag-grid-angular';
+import { PivotTableComponent } from './pages/pivot-table/pivot-table.component';
+
 
 
 @NgModule({
@@ -24,13 +28,17 @@ import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dial
     LayoutPageComponent,
     CardComponent,
     HeroImagePipe,
-    ConfirmDialogComponent //Pipes
+    ConfirmDialogComponent,
+    TablePageComponent,
+    PivotTableComponent //Pipes
   ],
   imports: [
     CommonModule,
     HeroesRoutingModule,
     MaterialModule,
-    ReactiveFormsModule //para el input search auto complete
+    ReactiveFormsModule, //para el input search auto complete
+    AgGridModule
+    
   ]
 })
 export class HeroesModule { }

@@ -15,7 +15,9 @@ export class LayoutPageComponent {
   public sidebarItems = [
     { label: 'Listado', icon: 'label', url: './list'},
     { label: 'Añadir', icon: 'add', url: './new-hero'},
-    { label: 'Buscar', icon: 'search', url: './search'}
+    { label: 'Buscar', icon: 'search', url: './search'},
+    { label: 'Tablas', icon: 'table', url: './table'},
+    { label: 'Pivot', icon: 'settings', url: './pivot'},
   ]
 
   constructor( 

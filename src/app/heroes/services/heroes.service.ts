@@ -49,5 +49,10 @@ export class HeroesService {
 
     }
 
+    // Get Olympic Winners
+    getOlympicWinners(): Observable<any[]> {
+        return this.http.get<any[]>('https://www.ag-grid.com/example-assets/olympic-winners.json');
+    }
+
     
 }

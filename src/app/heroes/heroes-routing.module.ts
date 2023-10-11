@@ -5,6 +5,8 @@ import { NewPageComponent } from './pages/new-page/new-page.component';
 import { SearchPageComponent } from './pages/search-page/search-page.component';
 import { ListPageComponent } from './pages/list-page/list-page.component';
 import { HeroPageComponent } from './pages/hero-page/hero-page.component';
+import { TablePageComponent } from './pages/table-page/table-page.component';
+import { PivotTableComponent } from './pages/pivot-table/pivot-table.component';
 
 // localhost:4200/heroes
 const routes: Routes = [
@@ -29,6 +31,14 @@ const routes: Routes = [
         component: ListPageComponent
       },
       {
+        path: 'table',
+        component: TablePageComponent
+      },
+      {
+        path: 'pivot',
+        component: PivotTableComponent
+      },
+      {
         path: ':id',
         component: HeroPageComponent
       },
@@ -36,6 +46,7 @@ const routes: Routes = [
         path: '**',
         redirectTo: 'list'
       }
+
       
       
       
