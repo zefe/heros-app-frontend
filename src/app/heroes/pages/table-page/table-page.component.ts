@@ -20,13 +20,9 @@ export class TablePageComponent implements OnInit {
 
   // Each Column Definition results in one Column.
   public columnDefs: ColDef[] = [
-    { field: 'country', rowGroup: true, enableRowGroup: true },
-    { field: 'athlete' },
-    { field: 'sport', pivot: true, enablePivot: true },
-    { field: 'year', pivot: true, enablePivot: true },
-    { field: 'gold', aggFunc: 'sum' },
-    { field: 'silver', aggFunc: 'sum' },
-    { field: 'bronze', aggFunc: 'sum' },
+    { field: 'domain', rowGroup: true, enableRowGroup: true },
+    { field: 'traffic', aggFunc: 'sum' },
+    { field: 'trustFlow', pivot: true, enablePivot: true },
   ];
 
 
@@ -41,12 +37,41 @@ export class TablePageComponent implements OnInit {
     minWidth: 180,
   };
 
+ data = [
+    {
+      domain: 'duckduckgo.com',
+      path: '/search',
+      traffic: 15000,
+      trustFlow: 30
+    },
+    {
+      domain: 'duckduckgo.com',
+      path: '/images',
+      traffic: 8000,
+      trustFlow: 20
+    },
+    {
+      domain: 'google.com',
+      path: '/search',
+      traffic: 20000,
+      trustFlow: 42
+    },
+    {
+      domain: 'google.com',
+      path: '/images',
+      traffic: 10000,
+      trustFlow: 38
+    }
+  ]
+  
+
   
   constructor( private heroesService:HeroesService ){}
 
   ngOnInit(): void {
-    this.heroesService.getOlympicWinners()
-      .subscribe(heroes => this.rowData = heroes)
+    //this.heroesService.getOlympicWinners()
+      //.subscribe(heroes => this.rowData = heroes)
+      this.rowData = this.data
   }
 
   

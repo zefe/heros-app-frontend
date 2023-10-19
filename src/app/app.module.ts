@@ -6,7 +6,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
-import { WebdatarocksPivotModule } from 'ng-webdatarocks';
 
 @NgModule({
   declarations: [
@@ -20,10 +19,10 @@ import { WebdatarocksPivotModule } from 'ng-webdatarocks';
     
     AppRoutingModule,
     SharedModule,// Lo unico que importamos es este modulo, el resto es por lazyload
-    WebdatarocksPivotModule
+    
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }
 

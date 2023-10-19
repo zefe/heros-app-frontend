@@ -95,6 +95,7 @@
             ],
             "styles": [
               "@angular/material/prebuilt-themes/deeppurple-amber.css",
+              "node_modules/jqwidgets-scripts/jqwidgets/styles/jqx.base.css",
               "src/styles.css"
             ],
             "scripts": []

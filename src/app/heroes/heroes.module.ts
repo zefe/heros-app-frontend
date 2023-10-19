@@ -17,7 +17,8 @@ import { TablePageComponent } from './pages/table-page/table-page.component';
 import { AgGridModule } from 'ag-grid-angular';
 import { PivotTableComponent } from './pages/pivot-table/pivot-table.component';
 
-
+import { ButtonModule } from 'primeng/button';
+import { TableModule } from 'primeng/table';
 
 @NgModule({
   declarations: [
@@ -37,8 +38,10 @@ import { PivotTableComponent } from './pages/pivot-table/pivot-table.component';
     HeroesRoutingModule,
     MaterialModule,
     ReactiveFormsModule, //para el input search auto complete
-    AgGridModule
-    
+    AgGridModule,
+
+    ButtonModule,
+    TableModule
   ]
 })
 export class HeroesModule { }
