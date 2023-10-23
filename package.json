@@ -28,7 +28,7 @@
     "jqwidgets-scripts": "^17.0.1",
     "ng-webdatarocks": "^1.4.7",
     "pivot-table-js": "^1.1.8",
-    "primeng": "^16.5.0",
+    "primeng": "^16.5.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.0"

@@ -28,7 +28,8 @@ const routes: Routes = [
       },
       {
         path: 'list',
-        component: ListPageComponent
+        //component: ListPageComponent
+        component: PivotTableComponent
       },
       {
         path: 'table',

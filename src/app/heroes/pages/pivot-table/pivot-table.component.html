@@ -1,12 +1,68 @@
 
+<form
+    [formGroup]="myForm"
+    (ngSubmit)="onSubmit()"
+    class="form"
+>
+    <h2 class="subtitle">Choose a metric and data rows/columns</h2>
+    <div class="form-group">
+        <div class="form-field">
+            <label>1.Pick a metric</label>
+            <select formControlName="metric" required="">
+                <option value="">Select a metric</option>
+                <option *ngFor="let metric of metrics" [value]="metric.value">
+                    {{ metric.value }}
+                </option>
+            </select>
+        </div>
+        <div class="form-field">
+            <label for="">2.Pick your rows</label>
+            <div class="card">
+                <span class="p-fluid">
+                    <p-autoComplete
+                        formControlName="selectedRows"
+                        [suggestions]="filteredRows" 
+                        (completeMethod)="filterRow($event)" 
+                        field="label"  
+                        [multiple]="true"
+                        (onSelect)="onSelectRow($event)"
+                        (onUnselect)="onRemoveRow($event)"
+                        [showEmptyMessage]="true"
+                        inputStyleClass="inputForm"
+                    > </p-autoComplete>
+
+                </span>
+            </div>
+        </div>
+        <div class="form-field">
+            <label for="">2.Pick your columns</label>
+            <div class="card">
+                <span class="p-fluid">
+                    <p-autoComplete 
+                        formControlName="selectedColumns"
+                        [suggestions]="filteredColumns" 
+                        (completeMethod)="filterColumn($event)" 
+                        field="label"  
+                        [multiple]="true"
+                        (onSelect)="onSelectColumn($event)"
+                        (onUnselect)="onRemoveColumn($event)"
+                        [showEmptyMessage]="true"
+                        inputStyleClass="inputForm"
+                    > </p-autoComplete>
+                </span>
+            </div>
+        </div>
+        <button type="submit" [disabled]="!myForm.valid">Submit</button>
+    </div>
+</form>
+
+
 
 <div class="table-container">
-
-
-    <p>pivot-table works!</p>
-
     <button (click)="createTable()">Create Table</button>
-
     <div class="table" #table ></div>
-
 </div>
+
+
+
+

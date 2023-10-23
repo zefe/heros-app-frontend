@@ -19,6 +19,8 @@ import { PivotTableComponent } from './pages/pivot-table/pivot-table.component';
 
 import { ButtonModule } from 'primeng/button';
 import { TableModule } from 'primeng/table';
+import { AutoCompleteModule } from 'primeng/autocomplete';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,9 @@ import { TableModule } from 'primeng/table';
     AgGridModule,
 
     ButtonModule,
-    TableModule
+    TableModule,
+    AutoCompleteModule,
+    FormsModule,
   ]
 })
 export class HeroesModule { }
