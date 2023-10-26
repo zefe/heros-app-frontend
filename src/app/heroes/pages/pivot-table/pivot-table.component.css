@@ -1,12 +1,17 @@
+.form {
+    background-color: #FFF;
+    padding: 24px;
+}
 .form-group {
     display: flex;
     gap: 24px;
-    align-items: flex-end;
+    align-items: center;
 }
 
 .form-field {
     display: flex;
     flex-direction: column;
+    padding-bottom: 28px;
 }
 
 label {
@@ -48,38 +53,139 @@ button {
 }
 
 
-.table-container {
+.container {
+    padding: 2px;
     width: 100%;
-    min-height: 100vh;
+}
+
+.table {
+    width: 100%;
 }
 
 table {
     border-collapse: collapse;
+    background-color: #FFF;
 }
 
-.table {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-top: 50px;
 
-}
 
-tr {
-    border: 1px solid gainsboro;
-}
 
 th {
-    background-color: #f0f0f0;
-    border: 1px solid rgb(195, 194, 194);
+    font-size: 14px;
+    font-weight: 700;
+    background-color: rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    color: #292929;
+    text-align: start;
+    padding: 10px;
 }
 
 td {
-    padding: 4px;
+    padding: 10px;
+    color: #2c2c2b;
+}
+
+
+.table tbody tr {
+    color: #424242;
+    padding: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+}
+.table tbody tr:nth-child(even){
+    background-color: rgba(0, 0, 0, 0.04);
+}
+
+.table tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.07);
+}
+
+.pagination {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 40px;
+    background-color: #0961ef6d;
+}
+
+.form-select {
+    display: flex;
+    align-items: flex-end;
+}
+
+.form-select label {
+    padding: 5px;
+}
+
+
+select.select-pagination {
+    width: 60px;
+    height: 40px;
+}
+
+button.previos {
+    background-color: transparent;
+    border: none;
+}
+
+.buttons {
+    margin-left: 30px;
+
+    display: flex;
+    padding: 0 20px;
+
+    
 }
 
 
 
-tr:nth-child(even){background-color: #f2f2f2;}
 
-.table tr:hover {background-color: #ddd;}
+ /*
+ tooltip
+ */
+ .tooltip {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .tooltip .tooltiptext {
+    font-size: 12px;
+    visibility: hidden;
+    width: 100px;
+    background-color: rgb(108, 108, 108);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 4px;
+    
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -50px;
+    margin-bottom: 5px;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+
+  img:hover {
+    cursor: pointer;
+ }
+
+  .image-tooltip {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .image-tooltip:hover {
+
+    background-color: rgba(229, 229, 229, 0.777);
+  }

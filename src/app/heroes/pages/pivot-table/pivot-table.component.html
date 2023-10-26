@@ -29,6 +29,7 @@
                         (onUnselect)="onRemoveRow($event)"
                         [showEmptyMessage]="true"
                         inputStyleClass="inputForm"
+                        
                     > </p-autoComplete>
 
                 </span>
@@ -52,15 +53,75 @@
                 </span>
             </div>
         </div>
-        <button type="submit" [disabled]="!myForm.valid">Submit</button>
+        <button type="submit" [disabled]="!myForm.valid" >Submit</button>
     </div>
 </form>
 
+<div>
+    <div class="search">
+        <input 
+            type="text" 
+            placeholder="Filter"
+            #txtSearch
+            (keyup)="onSearch( txtSearch.value )"
+        >
+    </div>
+</div>
 
 
-<div class="table-container">
-    <button (click)="createTable()">Create Table</button>
-    <div class="table" #table ></div>
+<button (click)="createTable()">Create Table</button>
+<div class="container"  >
+    <div  #tableContainer >
+    </div>
+    <div class="pagination" *ngIf="showTable">
+        <form [formGroup]="formPage" class="form-select">
+    
+            <label for="pagination">Page:</label>
+            <select formControlName="page" class="select-pagination" >
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+        </form>
+        
+        <div class="buttons">
+            <div class="tooltip">
+                <span class="tooltiptext">Fisrt page</span>
+                <div class="image-tooltip">
+                <img src="../../../../assets/svg/arrow-left-end.svg" (click)="firstPage()" > 
+                </div>
+            </div>
+            <div class="tooltip">
+                <span class="tooltiptext">Previous page</span>
+                <div class="image-tooltip">
+                    <img src="../../../../assets/svg/arrow-left.svg"  (click)="previosPage()"/>
+                </div>
+            </div>
+            <div class="tooltip">
+                <span class="tooltiptext">Next page</span>
+                <div class="image-tooltip">
+                <img src="../../../../assets/svg/arrow-right.svg"  (click)="nextPage()"/>
+                </div>
+            </div>
+            <div class="tooltip">
+                <span class="tooltiptext">Last page</span>
+                <div class="image-tooltip">
+                <img src="../../../../assets/svg/arrow-right-end.svg"  (click)="lastPage()"/>
+                </div>
+            </div>
+
+
+
+
+
+            
+            
+            
+        
+
+        </div>
+    </div>
 </div>
 
 
